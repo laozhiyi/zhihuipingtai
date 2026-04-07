@@ -11,6 +11,72 @@
 
 ---
 
+### 测试账号
+
+> 本地开发环境使用 Mock.js 模拟数据，请使用以下测试账号登录：
+
+| 用户名 | 密码 |
+|--------|------|
+| test | 123456 |
+
+---
+
+### 项目结构
+
+```
+front-end-template/
+├── .gitignore                  # Git忽略配置
+├── index.html                  # HTML入口文件
+├── jsconfig.json               # JS配置文件
+├── package.json                # 项目依赖配置
+├── package-lock.json            # 依赖锁定文件
+├── README.en.md                 # 英文说明文档
+├── README.md                    # 说明文档
+├── tailwind.config.js          # TailwindCSS配置
+├── vite.config.js              # Vite构建配置
+├── yarn.lock                   # Yarn锁定文件
+│
+├── public/                      # 公共资源目录
+│   ├── background.jpg           # 登录页背景图
+│   ├── favicon.ico              # 网站图标
+│   └── loginPCTool.webp         # 登录页工具图标
+│
+└── src/                         # 源代码目录
+    ├── App.vue                 # 根组件
+    ├── main.js                 # 项目入口文件
+    │
+    ├── api/                    # API接口目录
+    │   └── index.js            # Axios配置及接口定义
+    │
+    ├── assets/                 # 静态资源目录
+    │   ├── gxnu.png            # 广西师范大学校徽
+    │   ├── index.css          # 全局样式入口
+    │   ├── logo.svg            # Logo图标
+    │   └── styles.css          # 全局样式
+    │
+    ├── components/             # 公共组件目录
+    │   ├── HomeFooter.vue     # 底部组件
+    │   └── HomeHeader.vue     # 顶部导航组件
+    │
+    ├── mock/                   # Mock模拟数据目录
+    │   └── index.js            # Mock.js配置及模拟接口
+    │
+    ├── router/                # 路由配置目录
+    │   └── index.js            # Vue Router路由配置
+    │
+    ├── stores/                 # 状态管理目录
+    │   └── auth.js             # 认证状态管理
+    │
+    └── views/                  # 页面视图目录
+        ├── HomeView.vue        # 主页视图
+        ├── LoginView.vue       # 登录页视图
+        └── home/               # 首页子模块目录
+            ├── Dashboard.vue   # 数据仪表盘组件
+            └── HomeContent.vue # 首页内容组件
+```
+
+---
+
 ### 使用技术栈说明
 
 1. **Vue3**：前端框架。

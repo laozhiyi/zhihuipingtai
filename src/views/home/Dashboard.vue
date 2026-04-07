@@ -43,8 +43,8 @@
     </div>
   </template>
   
-  <script>
-  import { defineComponent, ref } from "vue";
+  <script setup>
+  import { ref } from "vue";
   import { User, ShoppingCart, Coin } from "@element-plus/icons-vue";
   import { use } from "echarts/core";
   import { CanvasRenderer } from "echarts/renderers";
@@ -52,44 +52,27 @@
   import { GridComponent, TooltipComponent } from "echarts/components";
   import VChart from "vue-echarts";
   
-  // 注册 ECharts 组件
   use([CanvasRenderer, LineChart, GridComponent, TooltipComponent]);
   
-  export default defineComponent({
-    name: "Dashboard",
-    components: {
-      User,
-      ShoppingCart,
-      Coin,
-      VChart
+  const chartOption = ref({
+    tooltip: {
+      trigger: "axis",
     },
-    setup() {
-      // 图表数据
-      const chartOption = ref({
-        tooltip: {
-          trigger: "axis",
-        },
-        xAxis: {
-          type: "category",
-          data: ["1月", "2月", "3月", "4月", "5月", "6月"],
-        },
-        yAxis: {
-          type: "value",
-        },
-        series: [
-          {
-            data: [8200, 9320, 9010, 9340, 12900, 13300],
-            type: "line",
-            smooth: true,
-            color: "#4A90E2",
-          },
-        ],
-      });
-  
-      return {
-        chartOption,
-      };
+    xAxis: {
+      type: "category",
+      data: ["1月", "2月", "3月", "4月", "5月", "6月"],
     },
+    yAxis: {
+      type: "value",
+    },
+    series: [
+      {
+        data: [8200, 9320, 9010, 9340, 12900, 13300],
+        type: "line",
+        smooth: true,
+        color: "#4A90E2",
+      },
+    ],
   });
   </script>
   

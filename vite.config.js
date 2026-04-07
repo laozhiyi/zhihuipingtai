@@ -1,7 +1,7 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import vueDevTools from 'vite-plugin-vue-devtools';
+import VueDevTools from 'vite-plugin-vue-devtools';
 
 // 使用 import 代替 require
 import tailwindcss from 'tailwindcss';
@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) => {
       // Vue 插件
       vue(),
       // Vue DevTools 插件（只在开发模式下启用）
-      vueDevTools(),
+      VueDevTools(),
       // Mock 插件（只在开发模式下启用）
       
     ],
